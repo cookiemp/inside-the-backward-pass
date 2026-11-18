@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Personal study workspace files
+assets/
+lessons/
+reference/
+learning-records/
+MISSION.md
+RESOURCES.md
+NOTES.md
+NOTEBOOKLM_SOURCE.md
+task.md
