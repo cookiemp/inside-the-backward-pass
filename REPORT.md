@@ -26,7 +26,7 @@ During training, the **forward pass** computes predictions from left to right an
 ---
 
 ## 3. Phase 1: Hand Trace vs. Code Verification
-Using the fixed `2 -> 2 (Sigmoid) -> 1` network with `MSELoss`, `x = [1.0, 0.5]`, and `y = 1.0` (documented in [phase1_hand_trace.md](phase1_hand_trace.md)), running `python phase1_verify.py` matched every hand-calculated value:
+Using the fixed `2 -> 2 (Sigmoid) -> 1` network with `MSELoss`, `x = [1.0, 0.5]`, and `y = 1.0` (documented in [hand_trace/](hand_trace/)), running `python phase1_verify.py` matched every hand-calculated value:
 
 | Quantity | Hand Calculation | Code Output (`phase1_verify.py`) |
 | :--- | :--- | :--- |

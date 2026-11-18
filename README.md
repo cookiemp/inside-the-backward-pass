@@ -6,7 +6,6 @@ A minimal neural network library built from scratch using **NumPy and Matplotlib
 
 - `nn.py` — Core engine (`Linear`, `Sigmoid`, `ReLU`, `Tanh`, `MSELoss`, `BCELoss`, `Network`).
 - `hand_trace/` — Handwritten Phase 1 paper calculations (`page1_forward.jpg`, `page2_backward_part1.jpg`, `page3_backward_part2.jpg`).
-- `phase1_hand_trace.md` — Typed reference of the Phase 1 calculations (`2 -> 2 (Sigmoid) -> 1`, `MSELoss`).
 - `phase1_verify.py` — Runs the exact Phase 1 network and asserts every forward value and gradient matches the hand trace.
 - `grad_check.py` — Numerical gradient checking via central finite differences (`rel_error < 1e-6`).
 - `train_nonlinear.py` — Trains a linear baseline vs. an MLP on a pure-NumPy 2D Two Moons dataset (80/20 train/test split) and saves plots.
