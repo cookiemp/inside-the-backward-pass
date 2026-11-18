@@ -5,7 +5,8 @@ A minimal neural network library built from scratch using **NumPy and Matplotlib
 ## Project Files
 
 - `nn.py` — Core engine (`Linear`, `Sigmoid`, `ReLU`, `Tanh`, `MSELoss`, `BCELoss`, `Network`).
-- `phase1_hand_trace.md` — Step-by-step Phase 1 hand calculation (`2 -> 2 (Sigmoid) -> 1`, `MSELoss`).
+- `hand_trace/` — Handwritten Phase 1 paper calculations (`page1_forward.jpg`, `page2_backward_part1.jpg`, `page3_backward_part2.jpg`).
+- `phase1_hand_trace.md` — Typed reference of the Phase 1 calculations (`2 -> 2 (Sigmoid) -> 1`, `MSELoss`).
 - `phase1_verify.py` — Runs the exact Phase 1 network and asserts every forward value and gradient matches the hand trace.
 - `grad_check.py` — Numerical gradient checking via central finite differences (`rel_error < 1e-6`).
 - `train_nonlinear.py` — Trains a linear baseline vs. an MLP on a pure-NumPy 2D Two Moons dataset (80/20 train/test split) and saves plots.
@@ -23,8 +24,13 @@ python train_nonlinear.py
 ## Results
 
 ### Phase 1 & Phase 3 Verification
-- `phase1_verify.py`: All forward values (`z1`, `a1`, `y_hat`, `loss`) and backward gradients (`dW2`, `db2`, `da1`, `dz1`, `dW1`, `db1`, `dx`) match the hand trace (`[PASS]`).
+- `hand_trace/`: Handwritten paper calculations for the `2 -> 2 (Sigmoid) -> 1` network (`MSELoss`, `x = [1.0, 0.5]`, `y = 1.0`).
+- `phase1_verify.py`: All forward values (`z1`, `a1`, `y_hat`, `loss`) and backward gradients (`dW2`, `db2`, `da1`, `dz1`, `dW1`, `db1`, `dx`) match the handwritten trace (`[PASS]`).
 - `grad_check.py`: All parameters across `Linear`, `Sigmoid`, `ReLU`, `Tanh`, `MSELoss`, and `BCELoss` pass with relative error between `1.438e-11` and `1.378e-09` (well below `1e-6`).
+
+| Page 1: Forward Pass | Page 2: Loss &amp; Output Gradients | Page 3: Hidden Gradients |
+| :---: | :---: | :---: |
+| ![Page 1](hand_trace/page1_forward.jpg) | ![Page 2](hand_trace/page2_backward_part1.jpg) | ![Page 3](hand_trace/page3_backward_part2.jpg) |
 
 ### Non-Linear Classification (Two Moons, 240 Train / 60 Test)
 
